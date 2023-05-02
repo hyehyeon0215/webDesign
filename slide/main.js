@@ -105,9 +105,6 @@ $(document).ready(function () {
             movePrev(target_index);
         }
         
-
     })
-
-
 
 })
