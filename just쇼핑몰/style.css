@@ -57,7 +57,7 @@ header .inner {
     height: 100px;
     width: 1200px;
     margin: 0 auto;
-    background-color: #eee;
+    /* background-color: #eee; */
     position: relative;
 
 }
@@ -107,13 +107,167 @@ header .inner .wrap #gnb {
     display: block;
     width: 100px;
     height: 50px;
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0.7);
     font: 12px/50px 'arial';
-    color: #888;
+    color: #fff;
     text-align: center;
 }
 
 .sub > li > a:hover {
-    color: orange;
+    color: #1216ff;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#slider {
+    position: relative;
+    width: 100%;
+}
+
+#slide .frame {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#slide .frame li {
+    display: none;
+    bottom: 0;
+    left: 0;
+}
+
+#slide .frame li.on {
+    display: block;
+}
+
+
+#contentBox {
+    width: 100%;
+}
+
+#contentBox .inner {
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NGboard {
+    flex: 1;
+}
+
+.NGboard .tab {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+    border-bottom: 1px solid #333;
+}
+
+.NGboard .tab li {
+    width: 20%;
+    margin-left: 5px;
     background-color: #333;
+}
+
+.NGboard .tab li:last-child {
+    margin-left: 0;
+}
+
+.NGboard .tab li a {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    color: #f8f8f8;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-bottom: none;
+}
+
+.NGboard .tab li:nth-child(1) a {
+    border-right: none;
+}
+
+.NGboard .tab li.on {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -4px;
+    /* 제이쿼리 이후 설명 추가 */
+}
+
+.NGboard .tab li.on a {
+    color: #333;
+}
+
+.NGboard .tab .content {
+    width: 100%;
+    height: 100%;
+    /* calc를 사용해서 정확한 높이 지정 필요 */
+}
+
+#notice {
+    width: 100%;
+    height: 100%;
+}
+
+#notice>ul {
+    margin: 0 auto;
+    width: 100%;
+    padding: 8px;
+}
+
+#notice>ul>li {
+    display: flex;
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+#notice>ul>li:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#notice>ul>li>a {
+    color: #000;
+}
+
+#gallery {
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.banner {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.baro {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.baro div {
+    flex: 1;
 }

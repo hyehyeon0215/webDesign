@@ -15,4 +15,6 @@ $(document).ready(function(){
     $('#gnb>li').on("mouseleave",function(){
         $(this).children('a').removeClass("on");
     })
+
+    
 });
