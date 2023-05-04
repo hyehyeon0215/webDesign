@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    
+    // gnb
     $('#gnb').on('mouseenter', function(){
         $('.sub').stop().slideDown();
     });
@@ -16,5 +18,11 @@ $(document).ready(function(){
         $(this).children('a').removeClass("on");
     })
 
-    
+    //tab
+    $('.tab>li').on('click', function(){
+        $('.tab').find('li').removeClass('on');
+        $('.content').find('div').removeClass('on');
+
+        $(this).addClass('on');
+    })
 });
