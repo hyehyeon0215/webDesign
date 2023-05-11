@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    min-height: 200px;
+    background-color: #f8f8f8;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+}
+
+.popup h1 {
+    font: bold 25px/1 '맑은 고딕';
+    margin-bottom: 20px;
+}
+
+.popup p {
+    font: 16px/1.5 '맑은 고딕';
+    margin-bottom: 50px;
+}
+
+.popup button {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    border: none; outline: none;
+    background-color: #333;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+header .inner {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+header .inner h1 {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .inner .wrap {
+    flex: 4.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .inner .wrap #gnb {
+    /* display: flex; */
+    position: relative;
+    z-index: 10;
+}
+
+#gnb>li {
+    position: relative;
+    float: left;
+    /* line-height: 60px; */
+    text-align: center;
+}
+
+#gnb>li>a {
+    display: block;
+    width: 150px;
+    height: 60px;
+    font: bold 25px/60px '맑은 고딕';
+}
+
+#gnb>li:hover >a{
+    background-color: #333;
+    color: #fff;
+}
+
+#gnb>li>a.on {
+    background-color: #333;
+    color: #fff;
+}
+
+.sub {
+    position: absolute; top: 60px; left: 0;
+    display: none;
+}
+
+.sub>li>a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    font: 16px/50px '맑은 고딕';
+    text-align: center;
+    background-color: #ddd;
+    color: #222;
+}
+
+.sub>li>a:hover {
+    background-color: #333;
+    color: #ddd;
+}
+
+
+
+#slide {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 0;
+    overflow: hidden;
+}
+
+#slide .frame {
+    display: flex;
+    width: 3600px;
+    height: 300px;
+    position: relative;
+}
+
+
+
+
+
+#contentBox {width: 100%;}
+#contentBox .inner {
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NGboard {
+    flex: 1.5;
+    height: 200px;
+}
+
+.NGboard .tab {
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.NGboard .tab li {
+    width: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.NGboard .tab li a {
+    font: bold 15px/1 '맑은 고딕';
+    color: #fff;
+}
+
+.NGboard .tab li.on {
+    background-color: #fff;
+}
+
+.NGboard .tab li.on a {
+    color:#333
+}
+
+.content {
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+.content div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 1;
+}
+
+.content div.on {
+    opacity: 1;
+    z-index: 2;
+}
+
+#notice ul {
+    width: 100%;
+}
+
+#notice ul li {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+#notice ul li a {
+    font: 13px/30px "맑은 고딕";
+    margin-left: 10px;
+}
+
+#notice ul li span {
+    font: 11px/30px 'arial';
+    margin-right: 30px;
+}
+
+#notice ul li:hover {
+    background-color: #eee;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50px; */
+    background-image: url('images/banner.jpg');
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner p:first-child {
+    font: bold 18px/1 '맑은 고딕';
+    color: #333;
+}
+
+.banner p:last-child {
+    font: normal 16px/1 '맑은 고딕';
+    color: #333;
+}
+
+.baro {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    background-image: url('images/baro.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.baro a {
+    font: bold 20px/1.5 '맑은 고딕';
+    color: green;
+    position: relative;
+}
+
+.baro a::before {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: rgb(29, 207, 29);
+    position: absolute;
+    z-index: 3;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.baro a::after {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 3;
+    border-top: 2px solid rgb(29, 207, 29);
+    border-right: 2px solid rgb(29, 207, 29);
+    transform: rotate(45deg);
+    bottom: -25px;
+    left: 64%;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+footer .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .inner .footer_logo {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .inner .footer_wrap {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .inner .footer_wrap .footer_menu {
+    width: 100px;
+    height: 50px;
+}
+
+.footer_menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_menu ul li {
+    margin-left: 30px;
+}
+
+.footer_menu ul li a {
+    font: bold 15px/50px '맑은 고딕';
+}
+
+.footer_wrap .copyright {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_wrap .copyright span {
+    font: 12px/50px 'arial';
+    color: #333;
+}
