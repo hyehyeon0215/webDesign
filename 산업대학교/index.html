@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산업대학교</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.4.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="popupBg"></div>
+    <aside class="popup">
+        <h1>제목: 상반기 신입/경력 사원 채용 공고</h1>
+        <p>내용: 국내 최고의 대학로 발돋움하고 있는 산업대학교에서는
+            열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.
+            산업대학교와 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.</p>
+        <button id="close">닫기</button>
+    </aside>
+
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="images/logo_header.png" alt="산업대학교 로고">
+                </a>
+            </h1>
+            <nav class="wrap">
+                <div class="bgGnb"></div>
+                <!-- ul#gnb>li*4>a[href="#"]+ul.sub>li*4>a[href="#"] -->
+                <ul id="gnb">
+                    <li>
+                        <a href="#">대학소개</a>
+                        <ul class="sub">
+                            <li><a href="#">총장인사말</a></li>
+                            <li><a href="#">학교소개</a></li>
+                            <li><a href="#">홍보관</a></li>
+                            <li><a href="#">캠퍼스안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">입학안내</a>
+                        <ul class="sub">
+                            <li><a href="#">수시모집</a></li>
+                            <li><a href="#">정시모집</a></li>
+                            <li><a href="#">편입학</a></li>
+                            <li><a href="#">재외국민</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">정보서비스</a>
+                        <ul class="sub">
+                            <li><a href="#">대학정보알림</a></li>
+                            <li><a href="#">정보공개</a></li>
+                            <li><a href="#">정보서비스안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">참여게시판</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="slide">
+        <ul class="frame">
+            <li><img src="images/slide (1).jpg" alt="슬라이드1"></li>
+            <li><img src="images/slide (2).jpg" alt="슬라이드1"></li>
+            <li><img src="images/slide (3).jpg" alt="슬라이드1"></li>
+            <li><img src="images/slide (3).jpg" alt="슬라이드1"></li>
+            <li><img src="images/slide (3).jpg" alt="슬라이드1"></li>
+        </ul>
+    </section>
+
+    <section id="contentBox">
+        <div class="inner">
+            <article class="notice">
+                <div class="name">공지사항</div>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">산업대학교에서 12회 심포지움을 개최합니다.</a><span>2018-04-10</span></li>
+                        <li><a href="#">따뜻한 인터넷을 위한 선플캠페인에 참여하세요.</a><span>2018-04-10</span></li>
+                        <li><a href="#">[자료] 개인정보 보호를 위한 올바른 인터넷 사용법</a><span>2018-04-09</span></li>
+                        <li><a href="#">스몸비에 대응하는 청소년 교육자료를 배포합니다.</a><span>2018-03-17</span></li>
+                        <li><a href="#">산업대학교와 함께 하실 인재를 모집합니다.</a><span>2018-03-17</span></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="gallery">
+                <div class="name">갤러리</div>
+                <div class="content">
+                    <a href="#"><img src="images/gallery (1).jpg" alt="갤러리1"></a>
+                    <a href="#"><img src="images/gallery (2).jpg" alt="갤러리2"></a>
+                    <a href="#"><img src="images/gallery (3).jpg" alt="갤러리3"></a>
+                </div>
+            </article>
+            <article class="banner">
+                <a href="#">
+                    <span>2022학년도 산업대학교 <br>
+                        신입생모집 <br>
+                        2022.01.01~2022.02.02</span>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="inner">
+            <div class="footer_wrap">
+                <div class="footer_menu">
+                    <ul>
+                        <li><a href="#">법적고지</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <span>COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</span>
+                </div>
+            </div>
+            <div class="family">
+                <select name="family_site" id="family_site">
+                    <option value="family_site1">패밀리사이트1</option>
+                    <option value="family_site2">패밀리사이트2</option>
+                    <option value="family_site3">패밀리사이트3</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
