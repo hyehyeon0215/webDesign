@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333}
+
+
+.wrap {
+    width: 1000px;
+    height: 650px;
+    position: relative;
+    display: flex;
+}
+
+header {
+    width: 250px;
+    height: 100%;
+    position: relative;
+}
+
+header h1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gnb {
+    width: 100%;
+    padding: 10px;
+}
+
+#gnb>li {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#gnb>li>a {
+    display: block;
+    width: 100%;
+    padding: 7px 5px;
+    font: bold 15px/1 "맑은 고딕";
+    border: 1px solid #000;
+}
+
+#gnb>li:hover>a {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.sub {
+    display: none;
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+
+.sub>li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sub>li>a {
+    display: block;
+    width: 100%;
+    font: 13px/1 '맑은 고딕';
+    padding-left: 5px;
+}
+
+.sub>li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+main {
+    width: 750px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+main #slide {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+main #slide .frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main #slide .frame li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* 이미지 크기 보기 위해서 */
+main #slide .frame li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+main #contentBox {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+}
+
+.NGboard {
+    flex: 2;
+}
+
+.NGboard .tab {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+.NGboard .tab li {
+    width: 60px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.NGboard .tab li a {
+    font: bold 10px/1 '맑은 고딕';
+    color: #fff;
+}
+
+.NGboard .tab li.on {
+    background-color: #fff;
+}
+
+.NGboard .tab li.on a {
+    color: #333;
+}
+
+.NGboard .content {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.NGboard .content div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.NGboard .content div.on {
+    opacity: 1;
+    z-index: 2;
+}
+
+
+#notice ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#notice ul li {
+    /* display: flex; */
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+}
+
+#notice ul li a {
+    font: 13px/20px '맑은 고딕';
+}
+
+
+.banner {
+    flex: 1;
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner span {
+    font: 14px/1 '맑은 고딕';
+    color: #fff;
+}
+
+.baro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baro div {
+    width: 100%;
+}
+
+.baro a {
+    float: left;
+    width: 100%;
+}
+
+.baro a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.baro a span {
+    font: 10px/1 '맑은 고딕';
+    color: #333;
+    display: block;
+    text-align: center;
+}
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer_wrap {
+    width: 550px;
+    height: 100px;
+}
+
+footer .footer_wrap .footer_menu {
+    width: 100%;
+    height: 50px;
+}
+
+footer .footer_wrap .footer_menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .footer_wrap .footer_menu ul a {
+    font: bold 15px/50px '맑은 고딕';
+}
+
+footer .footer_wrap .copyright {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
