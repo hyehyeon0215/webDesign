@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+
+.popupBg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9;
+}
+.popup {
+    display: none;
+    position: absolute;
+    width: 500px;
+    min-height: 200px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    z-index: 10;
+}
+
+.popup h1 {
+    font: bold 24px/1 'arial';
+    margin-bottom: 30px;
+}
+
+.popup p {
+    font: 18px/1.5 '맑은 고딕';
+    margin-bottom: 50px;
+}
+
+.popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+header .inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner .logo {
+    flex: 2;
+}
+
+.wrap {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+}
+
+.gnbBg {
+    position: absolute;
+    width: 1200px;
+    height: 150px;
+    background-color: #333;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    display: none;
+}
+
+#gnb {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    margin-right: 0px;
+    z-index: 7;
+}
+
+#gnb>li {
+    float: left;
+    width: 150px;
+    position: relative;
+}
+
+#gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font: bold 25px/50px '맑은 고딕';
+}
+
+#gnb>li:hover>a {
+    background-color: #333;
+    color: #fff;
+}
+
+.sub {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+}
+
+.sub>li>a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    font: 16px/50px '맑은 고딕';
+    background-color: #333;
+    color: #888;
+}
+
+.sub>li>a:hover {
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+
+#slide {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#slide .frame {
+    position: relative;
+    display: flex;
+    width: 3600px;
+    height: 300px;
+}
+
+
+
+
+/* 컨텐츠박스 */
+
+#contentBox {
+    width: 100%;
+    height: 200px;
+}
+
+#contentBox .inner {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+article {
+    flex: 1;
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+}
+
+.tab {
+    width: 20%;
+    height: 30px;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-bottom: -1px;
+    border: 1px solid #000;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+}
+
+.content {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    border: 1px solid #000;
+    z-index: 3;
+}
+
+.notice .content ul {
+    width: 100%;
+    /* padding: 0 10px; */
+}
+
+.notice .content ul li{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+}
+
+.notice .content ul li:hover {
+    background-color: #eee;
+}
+
+.notice .content ul li a {
+    font: 12px/30px "맑은 고딕";
+    margin-left: 10px;
+}
+
+.gallery .content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gallery .content img {
+    width: 110px;
+}
+
+.banner {
+    position: relative;
+    background-image: url(images/banner.jpg);
+}
+
+.banner a{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    text-align: right;
+    font: 14px/2 '맑은 고딕';
+    color: #fff;
+}
+
+.banner a span {
+    font: bold 16px/2 '맑은 고딕';
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+footer .inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01b81a;
+}
+
+footer .copyright {
+    font: 12px/100px 'arial';
+    color: #333;
+}
+
+footer #family_site {
+    width: 10%;
+    height: 40px;
+    margin-right: 20px;
+}
