@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+
+.popupBg {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 8;
+    width: 550px;
+    text-align: center;
+    display: none;
+}
+
+.popup h1 {
+    font: bold 24px/1 '맑은 고딕';
+    margin-bottom: 30px;
+}
+
+.popup p {
+    font: 16px/1.5 '맑은 고딕';
+    margin-bottom: 50px;
+}
+
+.popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.wrap {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+header {
+    width: 250px;
+    height: 100%;    
+}
+
+header h1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px dashed #ff70e0;
+    margin-bottom: 20px;
+}
+
+#gnb {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#gnb>li:hover >a {
+    background-color: #e77dd0;
+    color: #fff;
+}
+
+#gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font: bold 18px/60px '맑은 고딕';
+    border: 2px solid #000;
+    border-bottom: none;
+    background-color: #fff;
+    color: #000;
+}
+
+#gnb>li:last-of-type >a{
+    border-bottom: 2px solid #000;
+}
+
+
+.sub {
+    width: 100%;
+    border: 2px solid #000;
+    display: none;
+}
+
+
+.sub>li:hover >a {
+    background-color: #e7e7e7;
+}
+
+header .sub>li>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font: 16px/40px '맑은 고딕';
+}
+
+
+
+main {
+    width: 750px; height: 650px;
+}
+
+#slide {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+#slide .frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#slide .frame li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contentBox {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+#contentBox article .tab {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #000;
+    border-bottom: none;
+    z-index: 6;
+}
+
+#contentBox article .content {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.notice {
+    flex: 2;
+}
+
+.notice .content ul {
+    padding: 25px 0 ;
+}
+
+.notice .content ul>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.notice .content ul>li:hover {
+    background-color: #f7f7f7;
+}
+
+.notice .content ul>li a {
+    font: 10px/1 '맑은 고딕';
+}
+
+.notice .content ul>li span {
+    font: 10px/1 '맑은 고딕';
+    color: #333;
+}
+
+.gallery {
+    flex: 1;
+}
+
+.gallery .content {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery .content a {
+    width: 50px;
+    height: 150px;
+}
+
+.gallery .content a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.baro {
+    flex: 1;
+    background: url(images/baro.jpg) no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.baro>p {
+    font: 16px '맑은 고딕';
+}
+
+.baro>p>span {
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+footer .copy{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 14px/1 '맑은 고딕';
+    color: #333;
+}
+
+footer .footer_wrap {
+    flex: 2;
+}
+
+footer .footer_wrap #family_site {
+    padding: 5px 10px;
+    border-radius: 5px;
+}

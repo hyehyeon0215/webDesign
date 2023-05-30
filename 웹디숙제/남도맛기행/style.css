@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+.popup {
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 8;
+    width: 550px;
+    text-align: center;
+    display: none;
+    border: 1px solid #000;
+}
+
+.popup h1 {
+    font: bold 24px/1 '맑은 고딕';
+    margin-bottom: 30px;
+}
+
+.popup p {
+    font: 16px/1.5 '맑은 고딕';
+    margin-bottom: 50px;
+}
+
+.popup button {
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wrap {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+header {
+    width: 250px;
+    height: 100%;    
+}
+
+header h1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#gnb {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#gnb>li:hover >a {
+    background-color: #333;
+    color: #fff;
+}
+
+#gnb>li {
+    margin-top: 1px;
+}
+
+#gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font: bold 18px/60px '맑은 고딕';
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+
+
+.sub {
+    z-index: 7;
+    width: 100%;
+    background-color: #000;
+    display: none;
+    position: absolute;
+    left: 225px;
+    top: -50px;
+}
+
+.sub::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    transition: 0.5s
+}
+
+.sub>li>a {
+    font: 12px/1 맑은 고딕;
+    color: #fff;
+}
+
+
+.sub>li:hover >a {
+    background-color: #fff;
+    color: #000;
+}
+
+header .sub>li>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font: 16px/40px '맑은 고딕';
+    color: #fff;
+}
+
+
+
+main {
+    width: 750px; height: 650px;
+}
+
+#slide {
+    width: 750px;
+    height: 350px;
+    overflow: hidden;
+}
+
+#slide .frame {
+    width: 2250px;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+#slide .frame li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contentBox {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+#contentBox article {
+    flex: 1;
+    overflow: hidden;
+    padding: 5px;
+}
+
+#contentBox article .tab {
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -1px;
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 10px;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+#contentBox article .content {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+#contentBox .notice .content ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contentBox .notice .content ul li a {
+    color: #333;
+    font: 10px/1 '맑은 고딕';
+}
+
+#contentBox .notice .content ul li span {
+    color: #333;
+    font: 10px/1 '맑은 고딕';
+
+}
+
+#contentBox .gallery .content {
+    display: flex;
+}
+
+#contentBox .gallery .content a {
+    
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+#contentBox .gallery .content a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 70%;
+}
+
+#contentBox .gallery .content a:hover img {
+    opacity: 100%;
+}
+
+#contentBox .banner {
+    background: url(images/banner.jpg) no-repeat center;
+    position: relative;
+}
+
+#contentBox .banner p {
+    font: 14px/1 '맑은 고딕';
+    color: #fff;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 20%;
+}
+
+#contentBox .banner span {
+    font: 12px/1 '맑은 고딕';
+    color: #ddd;
+    position: absolute;
+    letter-spacing: 2px;
+    top: 70%;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+footer h2 {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer_wrap {
+    flex: 6;
+}
+
+footer .footer_wrap .footer_menu {
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .footer_wrap .footer_menu>li>a {
+    font: 14px/1 '맑은 고딕';
+    color: #333;
+}
+
+footer .footer_wrap .copy {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer .footer_wrap .copy p {
+    font: 12px/1 '맑은 고딕';
+    color: #333;
+}

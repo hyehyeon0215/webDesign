@@ -22,3 +22,12 @@ setInterval(function(){
     $('#slide .frame li').eq(slideIndex).fadeIn(500);
 
 },3000);
+
+
+$('#notice>ul>li').eq(0).on("click", function() {
+    $('.popup').show();
+})
+
+$('.close').on("click", function() {
+    $('.popup').hide();
+})

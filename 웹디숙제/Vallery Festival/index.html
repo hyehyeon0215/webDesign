@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallery Festival</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popBg"></div>
+    <aside class="popup">
+        <h1>Vallery Festival</h1>
+        <p>놀자! 즐기자! 마시자!<br>
+            4일간 펼쳐지는 한 여름밤의 뮤직 페스티벌<br>
+            일정 : 2020.08.01 ~ 08.04 (4일간)<br>
+            시간 : 19:00 ~ 22:00<br>
+            장소 : 한강공원</p><br>
+        <button id="close">x닫기</button>
+    </aside>
+
+    <div class="wrap">
+        <header>
+            <h1><a href="#"><img src="images/header_logo.png" alt="Vallert Festival 헤더 로고"></a></h1>
+            <nav>
+                <div class="gnbBg"></div>
+                <ul id="gnb">
+                    <li>
+                        <a href="#">축제소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Festivalt소개</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예약안내</a>
+                        <ul class="sub">
+                            <li><a href="#">예약하기</a></li>
+                            <li><a href="#">예약확인/취소</a></li>
+                            <li><a href="#">단체예약문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아티스트</a>
+                        <ul class="sub">
+                            <li><a href="#">고릴라즈</a></li>
+                            <li><a href="#">메이저 레이저</a></li>
+                            <li><a href="#">아우스게인</a></li>
+                            <li><a href="#">타임로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">사진갤러리</a></li>
+                            <li><a href="#">영상갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="slide">
+                <ul class="frame">
+                    <li><img src="images/slide1.jpg" alt="Vallery Festival"></li>
+                    <li><img src="images/slide2.jpg" alt="Vallery Festival"></li>
+                    <li><img src="images/slide3.jpg" alt="Vallery Festival"></li>
+                </ul>
+            </section>
+
+            <section id="contentBox">
+                <article class="notice">
+                    <div class="tab">공지사항</div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">페스티벌 변경사항 알림</a><span>2020.03.05</span></li>
+                            <li><a href="#">페스티벌 경연대회 일정안내</a><span>2020.03.02</span></li>
+                            <li><a href="#">2019 자원봉사자 배치 공지</a><span>2020.02.11</span></li>
+                            <li><a href="#">탈춤그리기 대회 최종 수상작 발표</a><span>2020.01.15</span></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="gallery">
+                    <div class="tab">갤러리</div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#"><img src="images/gal1.jpg" alt="기타 연주 사진"></a></li>
+                            <li><a href="#"><img src="images/gal2.jpg" alt="솔로 공연 사진"></a></li>
+                            <li><a href="#"><img src="images/gal3.jpg" alt="응원 사진"></a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="baro">
+                    <p>4일간 펼쳐지는 한여름밤의 뮤직 페스티벌
+                    <span>예약바로가기></span></p>
+                </article>
+            </section>
+            <footer>
+                <h2><a href="#"><img src="images/footer_logo.png" alt=""></a></h2>
+                <div class="copy">
+                    <p>Copyright by Vallery Festival, All right reserved.</p>
+                </div>
+                <select name="family_site" id="family_site">
+                    <option value="family_site1">조직위원회</option>
+                    <option value="family_site2">아티스트</option>
+                </select>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
