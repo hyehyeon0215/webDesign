@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+#wrap {
+    width: 100%;
+    position: relative;
+}
+
+#popupBg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    z-index: 99;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    z-index: 99;
+}
+
+#popup h2 {
+    font: bold 18px/1.5 "맑은 고딕";
+    padding: 18px 20px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+#popup span {
+    display: block;
+    font: bold 15px/1.3 "맑은 고딕";
+    color: brown;
+    padding: 10px 20px;
+}
+
+#popup p {
+    font: 12px/1.3 "맑은 고딕";
+    color: #666;
+    padding: 0px 20px 10px;
+}
+
+#close {
+    display: block;
+    outline: none;
+    border: none;
+    font: bold 13px/1 "맑은 고딕";
+    background-color: rgba(0, 0, 0, 0.07);
+    margin: 10px auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 95%;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 800px;
+}
+
+/* header */
+header {
+    width: 200px;
+    height: 100%;
+}
+
+header>h1 {
+    width: 100%;
+    height: 130px;
+}
+
+header>h1>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #gnb {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #e9e9e9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header #gnb>li {
+    width: 100%;
+}
+
+header #gnb>li:hover>a {
+    background-color: #333;
+    color: #fff;
+}
+
+header #gnb>li>a {
+    display: block;
+    text-align: center;
+    font: bold 16px/1 "맑은 고딕";
+    padding: 13px 0;
+}
+
+.sub {
+    display: none;
+}
+
+.sub>li {
+    width: 100%;
+}
+
+.sub>li>a {
+    display: block;
+    text-align: center;
+    font: 14px/1 "맑은 고딕";
+    padding: 10px 0;
+}
+
+.sub>li>a:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* contentBox */
+#contentBox {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    padding: 20px 0px 20px 20px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#contentBox #notice,
+#contentBox #gallery {
+    position: relative;
+    margin: 30px 0;
+    border: 2px solid #e9e9e9;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+#contentBox #baro {
+    position: relative;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #e9e9e9;
+}
+
+#contentBox #notice:hover,
+#contentBox #gallery:hover,
+#contentBox #baro:hover {
+    border: 2px solid #fd9800;
+}
+
+#contentBox #notice>a,
+#contentBox #gallery>a,
+#contentBox #baro>a {
+    position: absolute;
+    top: -20px;
+    left: -2px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    font: bold 14px/1 "맑은 고딕";
+    padding: 8px 0;
+    background-color: #e9e9e9;
+    border: 2px solid #e9e9e9;
+    border-radius: 30px 30px 30px 0px;
+    transition: 0.1s;
+}
+
+#contentBox #notice:hover>a,
+#contentBox #gallery:hover>a,
+#contentBox #baro:hover>a {
+    background-color: #fd9800;
+    border: 2px solid #fd9800;
+    color: #fff;
+}
+
+#notice>ul {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+#notice>ul>li {
+    width: 95%;
+    margin: 0 auto;
+    padding: 12px 10px;
+    /* border-bottom: 1px solid #fff; */
+    border-radius: 30px 30px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#notice>ul>li:nth-child(odd) {
+    background-color: #e9e9e9;
+    border-radius: 30px 30px 30px 0px;
+}
+
+#notice>ul>li:hover {
+    background-color: #ccc;
+}
+
+#notice>ul>li>a {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 14px/1 "맑은 고딕";
+}
+
+#notice>ul>li>span {
+    font: 14px/1 "맑은 고딕";
+}
+
+#gallery .photo {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#gallery .photo>a {
+    display: block;
+    width: 120px;
+    height: 80px;
+    text-align: center;
+}
+
+#gallery .photo>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 0px;
+}
+
+#gallery .photo>a>span {
+    font: bold 13px/1 "맑은 고딕";
+}
+
+#baro #icon {
+    margin-top: 10px;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#baro #icon>a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 15px 0;
+    margin: 0 5px;
+    text-align: center;
+    transition: 0.2s;
+    border-radius: 20px 20px 20px 0px;
+}
+
+#baro #icon>a:hover {
+    background-color: #e9e9e9;
+}
+
+#baro #icon>a>img {
+    width: 100%;
+    height: 40px;
+    object-fit: contain;
+}
+
+#baro #icon>a>span {
+    font: bold 13px/2 "맑은 고딕";
+}
+
+/* slide */
+#slide {
+    width: calc(100% - 200px - 400px);
+    height: 100%;
+    padding: 30px;
+}
+
+#slide #slideBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px 20px 20px 0px;
+}
+
+.frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.frame>li {
+    width: 100%;
+    height: 100%;
+}
+
+.frame>li>img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+/* footer */
+footer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #e9e9e9;
+}
+
+footer>h2 {
+    width: 200px;
+    height: 100%;
+}
+
+footer>h2>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>h2>a>img {
+    width: 120px;
+}
+
+.copyright {
+    width: calc(100% - 530px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyright span {
+    font: 15px/1.5 "맑은 고딕";
+}
+
+.familySite {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.familySite select {
+    outline: none;
+    width: 75%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font: bold 14px/1 "맑은 고딕";
+}
